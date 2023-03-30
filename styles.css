@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #2AC8C8;
+    --secondary-color: #1d8f8f;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#7FF9F6;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+#password-generator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: #2AC8C8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#password-generator h1{
+    margin-top: 0;
+}
+
+#password-generator {
+    max-width: 500px;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type="text"], input[type="number"]{
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 250px;
+    color: black;
+}
+
+button{
+    padding: 5px 10px;
+    background-color:#2AC8C8 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+button:hover{
+    background-color: #1d8f8f;
+}
+
+@media only screen and (min-width: 768px){
+    #main {
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
