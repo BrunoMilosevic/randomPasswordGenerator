@@ -20,6 +20,7 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"')
 let checkedOptions = []
 
 
+
 //Checking which checkboxes have been checked
 if (uppercase.checked){
     chars +=upperLetters
@@ -35,6 +36,25 @@ if (symbols.checked){
 }
 console.log(chars)
 
+//Checking if at least one checkbox has been checked
+for (const checkbox of checkboxes) {
+    if (checkbox.checked) {
+      if (checkbox.id === "uppercase") {
+        checkedOptions.push(upperLetters);
+      } else if (checkbox.id === "lowercase") {
+        checkedOptions.push(lowerLetters);
+      } else if (checkbox.id === "numbers") {
+        checkedOptions.push(numbersArray);
+      } else if (checkbox.id === "symbols") {
+        checkedOptions.push(specialSymbols);
+      }
+    }
+  }
+
+if(checkedOptions.length === 0){
+    alert("Please check at least one checkbox)");
+    return;
+}
 for (let i = 0; i < number; i++){
     let randomIndex = Math.floor(Math.random() * chars.length)
     password += chars[randomIndex]
